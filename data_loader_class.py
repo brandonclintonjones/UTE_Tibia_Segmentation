@@ -944,6 +944,23 @@ if __name__ == "__main__":
     # Instantiate the generator class. This class will call the data augmentation class at the time of image generation when needed
     # NOTE: THIS DATASET IS SET UP TO RETURN IN A CHANNELS FIRST FORMAT
     # SO THE TENSOR DIMENSIONS ARE ( BATCH , CHANNELS , N_ROWS  , N_COLS )
+
+
+    # my_gen = data_generator(
+    #     create_new_dataset=False,
+    #     valid_split=0.2,
+    #     channel_str=channel_str,
+    #     seed=1,
+    #     noise=0,
+    #     zoomRange=(1, 1),
+    #     shearRange=0,
+    #     rotationRange=0,
+    #     widthShiftRange=0,
+    #     heightShiftRange=0,
+    #     flipLR=False,
+    #     flipUD=False,
+    # )
+
     my_gen = data_generator(
         create_new_dataset=True,
         valid_split=0.2,
@@ -958,6 +975,8 @@ if __name__ == "__main__":
         flipLR=True,
         flipUD=True,
     )
+
+
     # Create_new_dataset -
     #           If true, will load all data from .nii files and will save new .npy files
     #                   Keep false most of the time when training/optimizing
