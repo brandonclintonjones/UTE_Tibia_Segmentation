@@ -639,7 +639,7 @@ def main():
 
     name = name + "b_{}_e_{}_lr_{}".format(str(batch_size), str(max_epoch), str(lr))
 
-    name = "BEST_Echo1_Echo2_IR-rUTE"
+    # name = "BEST_Echo1_Echo2_IR-rUTE"
 
     conv_net = CNN(
         project_folder=project_folder,
@@ -656,7 +656,7 @@ def main():
     #
     #
     #
-    # conv_net.train()
+    conv_net.train()
     # conv_net.load()
     # conv_net.train()
     #
@@ -664,7 +664,7 @@ def main():
     #
     #
     #
-    conv_net.load_final()
+    # conv_net.load_final()
 
     the_data_generator = data_generator(
         create_new_dataset=False,
